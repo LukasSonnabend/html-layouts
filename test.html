@@ -1,0 +1,95 @@
+<html>
+
+<body>
+<div id="outerContainer">
+    <div id="sidenav"></div>
+    <div id="content">
+        <div id="top-bar"></div>
+        <div id="top-bar2"></div>
+        <div id="filters"></div>
+        <div id="grow-content">
+            <div id="grow-content-1"></div>
+            <div id="grow-content-2">
+                <div id="verylong-content"></div>
+            </div>
+        </div>
+        <div id="bottom-bar"></div>
+    </div>
+</div>
+</body>
+<style>
+    body {
+        margin: 0;
+        height: 100vh; /
+        padding: 0;
+    }
+    #verylong-content {
+        height: 2000px;
+        background-color: lightgray;
+    }
+
+    #grow-content-1 {
+        background-color: lightblue;
+        flex-grow: 1;
+    }
+
+    #grow-content-2 {
+        background-color: lightcoral;
+        flex-grow: 1;
+        overflow: auto;
+    }
+
+    #grow-content {
+        overflow: scroll;
+        display: flex;
+        flex-direction: row;
+        background-color: lightgreen;
+        
+    }
+    #bottom-bar {
+        background-color: rgb(0, 0, 0);
+        height: 75px;
+        flex-shrink: 0;
+    }
+    #filters {
+        background-color: pink;
+        height: 150px;
+        flex-shrink: 0;
+    }
+
+    #top-bar {
+        background-color: yellow;
+        height: 75px;
+        flex-shrink: 0;
+    }
+    #top-bar2 {
+        background-color: orange;
+        height: 75px;
+        flex-shrink: 0; /* Flex shrink 0 sagt mach gesetzte höhe*/
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        background-color: green;
+        height: 100%; 
+    }
+
+    #sidenav {
+        flex-shrink: 1;
+        background-color: blue;
+        width: 200px;
+    }
+
+    #outerContainer {
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100vw;
+    }
+
+</style>
+
+</html>
